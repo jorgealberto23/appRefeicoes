@@ -36,12 +36,12 @@ export default function Home({ navigation }) {
                 </View>
 
                 <View style={estilo.itensView}>
-                <FlatList
-                    data={refeicao}
-                    renderItem={({ item }) => {
-                        return (
-                            
-                            <View style={estilo.refeicoesstyle}>
+                    <FlatList
+                        data={refeicao}
+                        renderItem={({ item }) => {
+                            return (
+
+                                <View style={estilo.refeicoesstyle}>
                                     <TouchableOpacity onPress={() => navigation.navigate("Alterar", {
                                         id: item.id,
                                         nomeRefeicao: item.nomeRefeicao,
@@ -63,14 +63,14 @@ export default function Home({ navigation }) {
                                         </TouchableOpacity>
                                     </View>
                                 </View>
-                        );
-                    }}
+                            );
+                        }}
                     />
+                </View>
                 <TouchableOpacity style={estilo.BtnCadastrar} onPress={() => navigation.navigate("Cadastrar")}>
                     <Text style={estilo.cadastrar}>+</Text>
                 </TouchableOpacity>
             </View>
-                    </View>
         </ImageBackground>
     );
 }
@@ -81,7 +81,7 @@ const estilo = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop:200,
+        marginTop: 200,
     },
 
     fundo: {
@@ -91,12 +91,12 @@ const estilo = StyleSheet.create({
 
     fundo2: {
         flex: 1,
-        width:'auto',
-        height:'100%',
-        borderColor:'white',
-        borderTopWidth:1.2,
-        borderBottomWidth:1.2,
-        margin:8,
+        width: 'auto',
+        height: '100%',
+        borderColor: 'white',
+        borderTopWidth: 1.2,
+        borderBottomWidth: 1.2,
+        margin: 8,
     },
 
     itens: {
@@ -107,7 +107,7 @@ const estilo = StyleSheet.create({
         marginVertical: 10,
         padding: 10,
         width: 200,
-        height:100,
+        height: 100,
         justifyContent: 'center',
         textAlign: 'center',
     },
@@ -120,8 +120,8 @@ const estilo = StyleSheet.create({
         color: "white",
         fontWeight: '900',
         margin: 18,
-        textDecorationStyle:'double',
-        textDecorationLine:'underline'
+        textDecorationStyle: 'double',
+        textDecorationLine: 'underline'
     },
 
     titulo1: {
@@ -131,7 +131,7 @@ const estilo = StyleSheet.create({
         color: "white",
         fontWeight: '900',
         margin: 8,
-      
+
     },
 
     titulo3: {
@@ -142,7 +142,7 @@ const estilo = StyleSheet.create({
         fontSize: 18,
         fontWeight: '400',
     },
-    
+
     titulo4: {
         position: 'relative',
         left: 3,
@@ -155,7 +155,7 @@ const estilo = StyleSheet.create({
 
 
     refeicoesstyle: {
-        backgroundColor:'#fff',
+        backgroundColor: '#fff',
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 10,
@@ -169,7 +169,7 @@ const estilo = StyleSheet.create({
         textAlignVertical: 'center',
         marginVertical: 20,
         left: 180,
-        borderRadius:30,
+        borderRadius: 30,
     },
     deletar: {
         backgroundColor: '#FF5050',
@@ -179,29 +179,29 @@ const estilo = StyleSheet.create({
         fontWeight: '800',
     },
     cadastrar: {
-        fontSize:32,
+        fontSize: 32,
         color: "white",
-        fontWeight:'600',
+        fontWeight: '600',
     },
-    
+
     BtnCadastrar: {
         fontSize: 80,
-        left:'72%',
-        bottom:'10%',
-        width:50,
-        height:50,
-        justifyContent:'center',
-        textAlign:'center',
-        alignItems:'center',
-        borderRadius:16,
-        borderColor:'white',
-        borderWidth:2,
-        marginBottom:10,
+        left: '40%',
+        bottom: '18%',
+        width: 50,
+        height: 50,
+        justifyContent: 'center',
+        textAlign: 'center',
+        alignItems: 'center',
+        borderRadius: 16,
+        borderColor: 'white',
+        borderWidth: 2,
+        marginBottom: 10,
         backgroundColor: '#787878',
     },
 
     itensView: {
-        height:'110%',
+        height: '110%',
     },
 
 
